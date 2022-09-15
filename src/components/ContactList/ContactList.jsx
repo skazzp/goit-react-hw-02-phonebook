@@ -5,7 +5,7 @@ const ContactList = ({ filteredContacts, removeContact }) => {
       {filteredContacts.map(contact => {
         return (
           <li key={contact.id} className={css.item}>
-            <span>{contact.name}: </span>
+            <span className={css.name}>{contact.name} : </span>
             <span>{contact.number}</span>
             <button type="button" onClick={() => removeContact(contact.id)}>
               Delete
