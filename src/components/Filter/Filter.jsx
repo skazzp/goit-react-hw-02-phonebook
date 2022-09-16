@@ -19,4 +19,5 @@ export default Filter;
 
 Filter.propTypes = {
   filterState: PropTypes.string,
+  setFilter: PropTypes.func,
 };
