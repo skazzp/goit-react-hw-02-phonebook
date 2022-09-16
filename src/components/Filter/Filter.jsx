@@ -1,4 +1,6 @@
+import PropTypes from 'prop-types';
 import css from './Filter.module.css';
+
 const Filter = ({ setFilter, filterState }) => {
   return (
     <label htmlFor="filter">
@@ -14,3 +16,7 @@ const Filter = ({ setFilter, filterState }) => {
 };
 
 export default Filter;
+
+Filter.propTypes = {
+  filterState: PropTypes.string,
+};

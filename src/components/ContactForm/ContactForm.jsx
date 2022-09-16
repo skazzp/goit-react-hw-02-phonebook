@@ -1,6 +1,7 @@
 import { nanoid } from 'nanoid';
 import { Component } from 'react';
 import css from './ContactForm.module.css';
+import PropTypes from 'prop-types';
 
 class ContactsForm extends Component {
   state = {
@@ -63,3 +64,13 @@ class ContactsForm extends Component {
   }
 }
 export default ContactsForm;
+
+ContactsForm.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ),
+};

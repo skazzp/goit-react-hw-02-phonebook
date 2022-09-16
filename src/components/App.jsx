@@ -19,8 +19,8 @@ export class App extends Component {
     });
   };
   setFilter = event => {
-    const { name, value } = event.target;
-    this.setState({ [name]: value });
+    const { value } = event.target;
+    this.setState({ filter: value });
   };
   filterContacts = () => {
     return !this.state.filter
@@ -30,7 +30,6 @@ export class App extends Component {
         );
   };
   removeContact = id => {
-    console.dir(id);
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== id),
     }));
